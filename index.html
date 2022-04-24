@@ -91,7 +91,6 @@ FACEBOOK: https://www.facebook.com/themefisher
     height: auto;
     min-height: 400px;
     position: relative;
-    border: 1px solid #f00;
     margin-top:80px;
     background-image: url("images/background.png");
     background-repeat: repeat-x;
@@ -107,7 +106,7 @@ FACEBOOK: https://www.facebook.com/themefisher
     text-align: center;
     height: auto;
   }
-  .container > .slogan > p {
+  .container > .slogan > .row > .col > p {
     font-size: 1.4em;
     line-height: 1.2em;
     color: #ffffff;
@@ -128,6 +127,22 @@ FACEBOOK: https://www.facebook.com/themefisher
     vertical-align: top;
   }
 
+  .container > .publishers{
+    background-color: #FFA900 ;
+    color: #333333;
+    text-align: left;
+    height: auto;
+    text-align: center;
+  }
+  .container > .publishers > .row > .col > p {
+    font-size: 1.2em;
+    line-height: 1.1em;
+    color: #ffffff;
+    margin: 10px 0px;
+  }
+  .container > .publishers > .row > .col > img {
+    height: 50px;
+  }
   
   .tabbar{
     background-color: #2f2f2f;
@@ -145,7 +160,11 @@ FACEBOOK: https://www.facebook.com/themefisher
     text-align: center;
   }
   .tabbar > .row > .col > a{
-    font-size: 1.8em;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .tabbar > .row > .col > a > p{
+    font-size: 0.5em;
   }
   .tabbar > .row > .col > a > i, .tabbar > .row > .col > a > p{
     color: #f2f2f2;
@@ -164,8 +183,16 @@ FACEBOOK: https://www.facebook.com/themefisher
 <div class="container">
   <!-- Content here -->
   <section class="slogan box">
-    <img src="images/like.png" />
-    <p>Facilidade para conectar <strong>anunciantes</strong> a <strong>influencers</strong> sem dor de cabeça</p>
+    <div class="row">
+      <div class="col"><img src="images/like.png" /></div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p>Facilidade para conectar <strong>anunciantes</strong> a <strong>influencers</strong> sem dor de cabeça</p>
+      </div>
+    </div>
+    
+    
   </section>
   <section class="influencers box">
     <div class="row">
@@ -178,6 +205,17 @@ FACEBOOK: https://www.facebook.com/themefisher
     </div>
     
   </section>
+  <section class="publishers box">
+    <div class="row">
+      <div class="col"><img src="images/rating.png" /></div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p>Contrate <strong>influencers</strong></p>
+      </div>
+    </div>
+    
+  </section>
 </div>
 <div class="tabbar">
   <div class="row">
@@ -186,9 +224,7 @@ FACEBOOK: https://www.facebook.com/themefisher
     <div class="col"><a href="#" class="tabbar-item "><i class="bi bi-check-circle"></i><p>iPublis</p></a></div>
     <div class="col"><a href="#" class="tabbar-item "><i class="bi bi-send"></i><p>Propostas</p></a></div>
     <div class="col"><a href="#" class="tabbar-item "><i class="bi bi-person-circle"></i><p>Perfil</p></a></div>
-
   </div>
-
   </ul>
 </div>
 
