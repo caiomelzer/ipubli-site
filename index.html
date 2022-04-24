@@ -129,7 +129,7 @@ FACEBOOK: https://www.facebook.com/themefisher
   }
 
   
-  footer{
+  .tabbar{
     background-color: #2f2f2f;
     height: 80px;
     float: left;
@@ -139,13 +139,27 @@ FACEBOOK: https://www.facebook.com/themefisher
     left: 0px;
     width: 100%;
   }
+  .tabbar > .row{}
+  
+  .tabbar > .row > .col{
+    text-align: center;
+  }
+  .tabbar > .row > .col > a{
+    font-size: 1.8em;
+  }
+  .tabbar > .row > .col > a > i, .tabbar > .row > .col > a > p{
+    color: #f2f2f2;
+  }
+  .tabbar > .row > .col > a.active > i, .tabbar > .row > .col > a.active > p{
+    color: #ff7600;
+  }
 </style>
 <body>
   
 
 <header class="">
   <a href="#" class="logo" id=""><img src="images/logo-nome-2-branco.png" /></a>
-  <a href="#" class="search" id=""><i class="bi bi-search" he></i>  </a>
+  <a href="#" class="search" id=""><i class="bi bi-search"></i>  </a>
 </header>
 <div class="container">
   <!-- Content here -->
@@ -166,8 +180,16 @@ FACEBOOK: https://www.facebook.com/themefisher
   </section>
 </div>
 <div class="tabbar">
-  <!-- Content here -->
+  <div class="row">
+    <div class="col"><a href="#" class="tabbar-item active"><i class="bi bi-house"></i><p>Home</p></a></div>
+    <div class="col"><a href="#" class="tabbar-item "><i class="bi bi-heart"></i><p>Favoritos</p></a></div>
+    <div class="col"><a href="#" class="tabbar-item "><i class="bi bi-check-circle"></i><p>iPublis</p></a></div>
+    <div class="col"><a href="#" class="tabbar-item "><i class="bi bi-send"></i><p>Propostas</p></a></div>
+    <div class="col"><a href="#" class="tabbar-item "><i class="bi bi-person-circle"></i><p>Perfil</p></a></div>
 
+  </div>
+
+  </ul>
 </div>
 
 <footer class="">
