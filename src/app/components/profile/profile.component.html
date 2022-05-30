@@ -1,0 +1,99 @@
+<div class="container">
+    <section class="sub-header">
+        
+        <div class="row">
+           <div class="col-7 firstname">
+            <h2>{{currentUser.firstName}} {{currentUser.lastName}}</h2>
+            <!--<p><i class="bi bi-person-circle"></i> id#{{currentUser.id}}</p>-->
+           </div>
+           <div class="col-5 avatar">
+            <img src="{{currentUser.avatar}}" />
+           </div>
+        </div>
+     </section>
+     <section class="content user-info">
+        <div class="row my-data">
+            <div class="col">
+            <p class="slug"><span>\\</span> Meus Dados</p>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col label">Identificador: <span>{{currentUser.id}} </span></div>
+        </div>
+        <div class="row">
+            <div class="col label">Email: <span>{{currentUser.email}} </span></div>
+        </div>
+        <div class="row">
+            <div class="col label">Localização: <span>{{currentUser.country}}, {{currentUser.state}} </span></div>
+        </div>
+        <div class="row">
+            <div class="col label">Membro desde: <span>{{currentUser.createdAt  | date: 'dd/MM/YYYY' }}</span></div>
+        </div>
+        <div class="row">
+            <div class="col label">Status: <span class="{{currentUser.status}}">{{currentUser.status}}</span></div>
+        </div>
+        <div class="networks">
+            <p class="slug"><span>\\</span> Redes Sociais</p>
+            <div class="row network">
+                <div class="col">
+                    <div class="row network-body">
+                        <div class="col-2 network-logo"><i class="bi bi-instagram"></i></div>
+                        <div class="col-8">
+                            <div class="row network-info">
+                                <div class="col-12 network-name"><strong>caiomelzer</strong></div>
+                                <div class="col-12 network-data">Adicionado em: {{currentUser.createdAt  | date: 'dd/MM/YYYY' }}</div>
+                            </div>
+                        </div>
+                        <div class="col-2 network-more"><i class="bi bi-three-dots"></i></div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="row network">
+                <div class="col">
+                    <div class="row network-body">
+                        <div class="col-2 network-logo"><i class="bi bi-tiktok"></i></div>
+                        <div class="col-8">
+                            <div class="row network-info">
+                                <div class="col-12 network-name"><strong>caiomelzer</strong></div>
+                                <div class="col-12 network-data">Adicionado em: {{currentUser.createdAt  | date: 'dd/MM/YYYY' }}</div>
+                            </div>
+                        </div>
+                        <div class="col-2 network-more"><i class="bi bi-three-dots"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row network">
+                <div class="col">
+                    <div class="row network-body">
+                        <div class="col-2 network-logo"><i class="bi bi-twitter"></i></div>
+                        <div class="col-8">
+                            <div class="row network-info">
+                                <div class="col-12 network-name"><strong>caiomelzer</strong></div>
+                                <div class="col-12 network-data">Adicionado em: {{currentUser.createdAt  | date: 'dd/MM/YYYY' }}</div>
+                            </div>
+                        </div>
+                        <div class="col-2 network-more"><i class="bi bi-three-dots"></i></div>
+                    </div>
+                </div>
+            </div>-->
+        </div>  
+        
+      <div class="form-group row border-top-gray tools">
+        <div class="col-6 ">
+            <a href="/#/profile/edit" class="btn btn-block btn-black">Editar</a>
+        </div>
+        <div class="col-6 ">
+            <button (click)="logoff()" class="btn btn-block btn-orange">Sair</button>
+        </div>
+        
+    </div>
+    <div class="form-group row ">
+        <div class="col-12 ">
+            Precisa de ajuda?
+            <a href="https://wa.me/+5511981085656?text=Eu%20estou%20precisando%20de%20ajuda%20no%20iPubli!" target="_BLANK" class="btn btn-block btn-success">Fale conosco</a>
+        </div>
+    </div>
+    </section>
+    
+    
+</div>

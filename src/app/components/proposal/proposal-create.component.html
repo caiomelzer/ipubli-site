@@ -1,0 +1,59 @@
+<div class="container">
+   <section class="sub-header">
+       <h2>Vamos anunciar</h2>
+       <div class="row">
+          <div class="col">
+             <p>Preencha o formulário a seguir para enviar uma proposta.</p>
+          </div>
+       </div>
+    </section>
+    <section class="content">
+   <form #proposalDetail = "ngForm" (ngSubmit) = "onSendProposal(proposalDetail)" >
+      <div class="form-group row">
+         <div class="col-12 form-label">
+             Começa em
+         </div>
+         <div class="col-12">
+             <input id="startedAt" name="startedAt" placeholder="" type="date" class="form-control" required="required" ngModel>
+         </div>
+      </div>
+      <div class="form-group row">
+         <div class="col-12 form-label">
+          Termina em
+         </div>
+         <div class="col-12">
+            <input id="finishAt" name="finishAt" placeholder="" type="date" class="form-control" required="required" ngModel>
+         </div>
+      </div>
+      <div class="form-group row">
+         <div class="col-12 form-label">
+            Valor
+         </div>
+         <div class="col-12">
+            <input id="price" name="price" placeholder="" type="number" class="form-control" required="required" ngModel>
+         </div>
+      </div>     
+
+       
+      <div class="form-group row">
+           <div class="col-12 form-label">
+               Detalhes
+           </div>
+           <div class="col-12">
+               <textarea id="details" name="details" placeholder="" type="text" class="form-control" required="required" ngModel></textarea>
+           </div>
+       </div>
+       
+       <div class="form-group row">
+           <div class="col-6">
+               <a href="/#/home" class="btn btn-block btn-black">Cancelar</a>
+           </div>
+           <div class="col-6">
+               <button name="submit" type="submit" class="btn btn-block btn-orange">Enviar</button>
+           </div>
+       </div>
+   </form>
+</section>
+   
+   
+</div>

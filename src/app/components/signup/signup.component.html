@@ -1,0 +1,86 @@
+<div class="container">
+    <section class="sub-header">
+        <h2>Bem-vindo!!!</h2>
+        <div class="row">
+           <div class="col">
+              <p>Vamos começar sua jornada dentro de nossa plataform, para isso, precisamos realizar um cadastro básico.</p>
+           </div>
+        </div>
+     </section>
+     <section class="content">
+    <form #userSignup = "ngForm" (ngSubmit) = "onSubmit(userSignup)" >
+        
+        <div class="form-group row">
+            <div class="col-12 form-label">
+                Nome
+            </div>
+            <div class="col-12">
+                <input id="firstName" name="firstName" placeholder="" type="text" class="form-control" required="required" ngModel>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-12 form-label">
+                Sobrenome
+            </div>
+            <div class="col-12">
+                <input id="lastName" name="lastName" placeholder="" type="text" class="form-control" required="required" ngModel>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-12 form-label">
+                País
+            </div>
+            <div class="col-12">
+                <select  id="state" name="state"  ngModel>
+                   <!-- <option *ngFor="let state of states" value="{{state.state}}">{{state.state}}</option>-->
+                   <option value="BR">Brasil</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-12 form-label">
+                Estado
+            </div>
+            <div class="col-12">
+                <select  id="state" name="state"  ngModel>
+                    <option *ngFor="let state of states" value="{{state.state}}">{{state.state}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-12 form-label">
+                Email
+            </div>
+            <div class="col-12">
+                <input id="email" name="email" placeholder="" type="text" class="form-control" required="required" ngModel>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-12 form-label">
+                Senha
+            </div>
+            <div class="col-12">
+                <input id="password" name="password" placeholder="" type="password" class="form-control" required="required" ngModel>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-12 form-label">
+                Repita a sua senha
+            </div>
+            <div class="col-12">
+                <input id="repassword" name="repassword" placeholder="" type="password" class="form-control" required="required" ngModel>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <a href="/#/home" class="btn btn-block btn-black">Cancelar</a>
+            </div>
+            <div class="col-6">
+                <button name="submit" type="submit" class="btn btn-block btn-orange">Registar</button>
+            </div>
+        </div>
+    </form>
+</section>
+    
+    
+</div>

@@ -1,0 +1,33 @@
+<div class="container">
+     <section  *ngFor="let influencer of influencers" class="influencers box"  routerLink="/influencer/{{influencer.influencerId}}">
+          <div class="row">
+             <div class="col-4 avatar">
+                <img src="{{influencer.instagramAvatar}}" />
+             </div>
+             <div class="col-8 info">
+                 <div class="row ">
+                   <div class="col-6 count"> 
+                      <i class="bi bi-instagram"></i> <strong>{{influencer.instagramFollowers}}</strong><br />
+                      <i class="bi bi-tiktok"></i> N/A<strong></strong><br />
+                      <i class="bi bi-twitter"></i> N/A<strong></strong>
+                   </div>
+                   <div class="col-6 value"> 
+                      <p>A partir de: <strong>R${{influencer.startValue}}</strong></p>
+                   </div>
+                </div>
+                <div class="row city">
+                   <div class="col-12 city-name">{{influencer.country}}, {{influencer.state}}</div>
+                </div>
+                <div class="row focus">
+                   <div class="col-12 focus-label" *ngIf="influencer.segments" >nichos: <span>{{influencer.segments}}</span></div>
+                </div>
+    
+             </div>
+          </div>
+       </section>
+    
+    
+    
+    
+    
+     </div>

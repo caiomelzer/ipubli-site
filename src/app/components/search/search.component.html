@@ -1,0 +1,52 @@
+<div class="container">
+   <section class="search-header box" style="display:none">
+       <form class="search-form">
+         <div class="row">
+            <div class="col">
+               <select class="form-select search-select-state" aria-label="Estado">
+                  <option *ngFor="let state of states" value="{{state.id}}">
+                  {{state.state}}
+               </option>
+               </select>
+   
+            </div>
+         </div>
+         <div class="row search-form">
+            <div class="col">
+               <button type="submit" class="search-button">Buscar</button>
+            </div>
+         </div>
+      </form> 
+    </section>
+    <section  *ngFor="let influencer of influencers" class="influencers box"  routerLink="/influencer/{{influencer.userId}}">
+         <div class="row">
+            <div class="col-4 avatar">
+               <img src="{{influencer.instagramAvatar}}" />
+            </div>
+            <div class="col-8 info">
+                <div class="row ">
+                  <div class="col-6 count"> 
+                     <i class="bi bi-instagram"></i> <strong>{{influencer.instagramFollowers}}</strong><br />
+                     <i class="bi bi-tiktok"></i> N/A<strong></strong><br />
+                     <i class="bi bi-twitter"></i> N/A<strong></strong>
+                  </div>
+                  <div class="col-6 value"> 
+                     <p>A partir de: <strong>R${{influencer.startValue}}</strong></p>
+                  </div>
+               </div>
+               <div class="row city">
+                  <div class="col-12 city-name">{{influencer.country}}, {{influencer.state}}</div>
+               </div>
+               <div class="row focus">
+                  <div class="col-12 focus-label" *ngIf="influencer.segments" >nichos: <span>{{influencer.segments}}</span></div>
+               </div>
+   
+            </div>
+         </div>
+      </section>
+   
+   
+   
+   
+   
+    </div>

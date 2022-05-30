@@ -1,0 +1,85 @@
+<div class="container">
+    <section class="sub-header">
+        
+        <div class="row">
+            <div class="col-5 avatar">
+                
+                 <i *ngIf="favorite === false"  (click)="addFavorite()" class="bi bi-star"></i>
+                 <i *ngIf="favorite === true"  (click)="removeFavorite()" class="bi bi-star-fill"></i>
+            </div>
+           <div class="col-7 avatar">
+            <img src="{{currentInfluencer.instagramAvatar}}" />
+           </div>
+        </div>
+     </section>
+    <section class="content user-info">
+        <div class="row my-data">
+            <div class="col">
+            <p class="slug"><span>\\</span> Informações</p>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col label">Localização: <span>{{currentInfluencer.country}}, {{currentInfluencer.state}} </span></div>
+        </div>
+        <div class="row">
+            <div class="col label">Membro desde: <span>{{currentInfluencer.createdAt  | date: 'dd/MM/YYYY' }}</span></div>
+        </div>
+        <div class="row">
+            <div class="col label">Nichos: {{currentInfluencer.segments}}</div>
+        </div>
+        <div class="row">
+            <div class="col label">A partir de: R$ {{currentInfluencer.startValue}}</div>
+        </div>
+        <div class="networks">
+            <p class="slug"><span>\\</span> Redes Sociais</p>
+            <div class="row network">
+                <div class="col">
+                    <div class="row network-body">
+                        <div class="col-2 network-logo"><i class="bi bi-instagram"></i></div>
+                        <div class="col-8">
+                            <div class="row network-info">
+                                <div class="col-12 network-name">Seguidores: <strong> {{currentInfluencer.instagramFollowers}}</strong></div>
+                                <div class="col-12 network-name">Posts: <strong> {{currentInfluencer.instagramPosts}}</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row network">
+                <div class="col">
+                    <div class="row network-body">
+                        <div class="col-2 network-logo"><i class="bi bi-tiktok"></i></div>
+                        <div class="col-8">
+                            <div class="row network-info">
+                                <div class="col-12 network-name"><strong>Em breve</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row network">
+                <div class="col">
+                    <div class="row network-body">
+                        <div class="col-2 network-logo"><i class="bi bi-twitter"></i></div>
+                        <div class="col-8">
+                            <div class="row network-info">
+                                <div class="col-12 network-name"><strong>Em breve</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+      
+      <div class="form-group row border-top-gray tools">
+        <div class="col-6 ">
+            <button (click)="goBackToInfluencers()" class="btn btn-block btn-black">Voltar</button>
+        </div>
+        <div class="col-6 ">
+            <button (click)="doProposal(currentInfluencer.userId)" class="btn btn-block btn-orange">Fazer Proposta</button>
+        </div>
+    </div>
+    </section>
+    
+    
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+    
+    <section  *ngFor="let ipubli of ipublis" class="proposals box"    >
+         <div class="row">
+            <div class="col-3 id">
+               
+               <div class="proposal-avatar"><img src="http://ec2-15-228-148-206.sa-east-1.compute.amazonaws.com:4001/public/INSTAGRAM_35044151667.png" height="60px" width="60px" /></div>
+               <div class="proposal-id">#{{ipubli.id}}</div>
+
+               <div *ngIf="ipubli.status === 'RUNNING'" class="proposal-status orange">Execução</div>
+               <div *ngIf="ipubli.status === 'TO_PAID'" class="proposal-status gray">A Pagar</div>
+               <div *ngIf="ipubli.status === 'PAID'" class="proposal-status green">Pago</div>
+            </div>
+            <div class="col-6 info">
+              <div class="row ">
+                 <div *ngIf="ipubli.status === 'RUNNING'" class="proposal-status orange"><img src="/assets/images/bar-orange-1.png" height="7px" width="200px"></div>
+                 <div *ngIf="ipubli.status === 'TO_PAID'" class="proposal-status gray"><img src="/assets/images/bar-orange-2.png" height="7px" width="200px"></div>
+                 <div *ngIf="ipubli.status === 'PAID'" class="proposal-status green"><img src="/assets/images/bar-green.png" height="7px" width="200px"></div>
+                
+              </div>
+              <div class="row ">
+                 <div class="col-12 proposal-price"> R${{ipubli.price}}</div>
+              </div>
+              <div class="row ">
+                  <div class="col-12 proposal-date"> 
+                    <p>De {{ipubli.startedAt  | date: 'dd/MM/YYYY' }}<br /> Até {{ipubli.startedAt  | date: 'dd/MM/YYYY' }}</p>
+                  </div>
+                  
+               </div>
+   
+            </div>
+            <div class="col-3 show-more" ><a href="#"><i class="bi bi-file-earmark-text"></i>Detalhes</a></div>
+         </div>
+      </section>
+   
+   
+   
+   
+   
+    </div>
+    

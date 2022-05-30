@@ -1,0 +1,134 @@
+.container{
+    font-family: Arial, Helvetica, sans-serif !important;
+    margin: 80px 0 0 0 !important;
+    padding: 0 0 100px 0 !important;
+    .sub-header{
+        .row{
+            .avatar{
+                float: right;
+                text-align: left;
+                font-size: 2em;
+                line-height: 2em;
+                img{
+                    height: 130px;
+                    margin-bottom: -50px;
+                    border: 3px solid #ff7600;
+                    border-radius: 50%;
+                }
+            }
+            .firstname{
+                text-align: left;
+                vertical-align: middle;
+                /* margin-top: 10px !important; */
+                font-weight: bold;
+                color: #fff;
+                h2{
+                    font-size: 2rem;
+                    margin-top: 25px;
+                    margin-bottom: 0px;
+                    padding-bottom: 0px;
+                }
+                p{
+                    line-height: 1.2em;
+                    font-weight: 200;
+                    color: #ccc;
+                    font-size: 0.8em;
+                    margin-left: 3px;
+                }
+            }
+        }
+    }
+    .box{
+        border-radius: 10px;
+        margin: 0px 0px;
+        padding: 20px 20px;
+    }
+    .user-info{
+        margin-top: 20px;
+        color: #333;
+
+        .my-data{
+            text-align: left;
+            .slug{
+                margin-bottom: 7px;
+                font-size: 1.2em;
+                font-weight: bold;
+                padding-bottom: 0px;
+                span{
+                    font-weight: bold;
+                    color: #ff7600;
+                }
+            }
+            
+        }
+        .label{
+            font-size: 0.9em;
+            strong{
+                color: #ff7600;
+            };
+            span{
+                font-weight: 600;
+                color:#666;
+            }
+        }
+        margin-bottom: 15px;
+        .networks{
+            margin-top: 15px;
+            border-top: 1px solid #efefef;
+            padding-top: 10px;
+            .slug{
+                font-size: 1.2em;
+                font-weight: bold;
+                padding-bottom: 0px;
+                margin-bottom: -5px;
+                span{
+                    font-weight: bold;
+                    color: #ff7600;
+                }
+            }
+            .network{
+                margin-top: 10px;
+                padding-top: 10px;
+                margin-left: 0px;
+                border-top: 1px solid #efefef;
+                margin-right: 0px;
+                padding-bottom: 10px;
+                background-color: #efefef;
+                border-bottom: 1px solid #ccc;
+                .network-body{
+                    vertical-align: middle;
+                    line-height: 1em;
+                    .network-logo{
+                        i{
+                            font-size: 3em;
+                            color: #ff7600;
+                        }
+                        
+                    }
+                    .network-name{
+                        margin-top: 7px;
+                    }
+                    .network-data{
+                        line-height: 2em;
+                        font-size: 0.7em;
+                    }
+                    .network-more{
+                        line-height: 2em;
+                        font-size: 1.5em;
+                        float: right;
+                        text-align: right;
+                        color: #999;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+    .tools{
+        padding: 25px 0px;
+        margin-top: 25px;
+        margin-left: 0px;
+            border-top: 1px solid #efefef;
+            margin-right: 0px;
+    }
+}

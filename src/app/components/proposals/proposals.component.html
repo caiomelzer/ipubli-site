@@ -1,0 +1,41 @@
+<div class="container">
+    
+     <section  *ngFor="let proposal of proposals" class="proposals box"    >
+          <div class="row">
+             <div class="col-3 id">
+                
+                <div class="proposal-avatar"><img src="http://ec2-15-228-148-206.sa-east-1.compute.amazonaws.com:4001/public/INSTAGRAM_35044151667.png" height="60px" width="60px" /></div>
+                <div class="proposal-id">#{{proposal.id}}</div>
+
+                <div *ngIf="proposal.status === 'DRAFT' && proposal.isApprovedByInfluencer === 'NO'" class="proposal-status gray">Aguardando Influencer</div>
+                <div *ngIf="proposal.status === 'DRAFT' && proposal.isApprovedByInfluencer === 'YES'" class="proposal-status green">Em análise</div>
+                <div *ngIf="proposal.status === 'REJECTED'" class="proposal-status red">Rejeitada</div>
+             </div>
+             <div class="col-6 info">
+               <div class="row ">
+                  <div *ngIf="proposal.status === 'DRAFT' && proposal.isApprovedByInfluencer === 'NO'" class="proposal-status gray"><img src="/assets/images/bar-orange-1.png" height="7px" width="200px"></div>
+                  <div *ngIf="proposal.status === 'DRAFT' && proposal.isApprovedByInfluencer === 'YES'" class="proposal-status green"><img src="/assets/images/bar-orange-2.png" height="7px" width="200px"></div>
+                  <div *ngIf="proposal.status === 'REJECTED'" class="proposal-status red"><img src="/assets/images/bar-red.png" height="7px" width="200px"></div>
+                 
+               </div>
+               <div class="row ">
+                  <div class="col-12 proposal-price"> R${{proposal.price}}</div>
+               </div>
+               <div class="row ">
+                   <div class="col-12 proposal-date"> 
+                     <p>De {{proposal.startedAt  | date: 'dd/MM/YYYY' }}<br /> Até {{proposal.startedAt  | date: 'dd/MM/YYYY' }}</p>
+                   </div>
+                   
+                </div>
+    
+             </div>
+             <div class="col-3 show-more" ><a href="#"><i class="bi bi-file-earmark-text"></i>Detalhes</a></div>
+          </div>
+       </section>
+    
+    
+    
+    
+    
+     </div>
+     

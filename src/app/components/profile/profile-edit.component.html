@@ -1,0 +1,75 @@
+<div class="container">
+    <section class="sub-header">
+        <h2>Editar</h2>
+        <div class="row">
+           <div class="col">
+              <p>Alguns dados podem ser editados a qualquer momento.</p>
+           </div>
+        </div>
+     </section>
+     <section class="content">
+    <form #userEdit="ngForm" (ngSubmit)="onSubmit(userEdit)" onLoad="teste(userEdit)" >
+        
+        <div class="form-group row">
+            <div class="col-12 form-label">
+                Nome
+            </div>
+            <div class="col-12">
+                <input id="firstName" name="firstName" placeholder="" type="text" class="form-control" required="required" ngModel>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-12 form-label">
+                Sobrenome
+            </div>
+            <div class="col-12">
+                <input id="lastName" name="lastName" placeholder="" type="text" class="form-control" required="required" ngModel>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-12 form-label">
+                País
+            </div>
+            <div class="col-12">
+                <input id="country" name="country" placeholder="" type="text" class="form-control" required="required" ngModel>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-12 form-label">
+                Estado
+            </div>
+            <div class="col-12">
+                <input id="state" name="state" placeholder="" type="text" class="form-control" required="required" ngModel>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-12 form-label">
+                Valor mínimo
+            </div>
+            <div class="col-12">
+                <input id="lastName" name="lastName" placeholder="" type="text" class="form-control" required="required" ngModel>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-12 form-label">
+                Instagram
+            </div>
+            <div class="col-12">
+                <input id="instagram" name="instagram" placeholder="" type="text" class="form-control" required="required" ngModel>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <a href="/#/profile" class="btn btn-block btn-black">Cancelar</a>
+            </div>
+            <div class="col-6">
+                <button name="submit" type="submit" class="btn btn-block btn-orange">Registar</button>
+            </div>
+        </div>
+    </form>
+</section>
+    
+    
+</div>
+        
+  

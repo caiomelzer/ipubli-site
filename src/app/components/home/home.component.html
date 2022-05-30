@@ -1,0 +1,51 @@
+<div class="container">
+<section class="slogan box">
+    <div class="row">
+       <div class="col"><img src="assets/images/like.png" /></div>
+    </div>
+    <div class="row">
+       <div class="col">
+          <p>A conexão direta entre a sua <strong>marca</strong> e o <strong>influenciador</strong></p>
+       </div>
+    </div>
+ </section>
+ <a href="/#/signup">
+ <section class="influencers box">
+    <div class="row">
+       <div class="col-8 text">
+          <p>Você é um <strong>influencer</strong>?<br />Cadastre-se aqui</p>
+       </div>
+       <div class="col-4 image">
+          <img src="assets/images/rating (1).png" />
+       </div>
+    </div>
+ 
+ </section>
+</a>
+<a href="/#/signup">
+ <section class="publishers box">
+    <div class="row">
+       <div class="col"><img src="assets/images/rating.png" /></div>
+    </div>
+    <div class="row">
+       <div class="col">
+          <p>Você é um <strong>Anunciante/Marca?</strong> Cadastre-se aqui!</p>
+       </div>
+    </div>
+ </section>
+</a>
+ <section class="top-influencers box">
+    <div class="row">
+       <p class="title"><strong>Influencers</strong> sugeridos</p>
+    </div>
+    <div class="row">
+      <div  *ngFor="let instagramUser of instagramUsers" class="col-4">        
+         <a href="/#/influencer/{{instagramUser.userId}}">
+            <img src="{{instagramUser.instagramAvatar}}" />
+         </a>
+         <strong>{{instagramUser.instagramFollowers}}</strong> Seguidores
+      </div>
+   </div>
+ </section>
+ </div>
+
